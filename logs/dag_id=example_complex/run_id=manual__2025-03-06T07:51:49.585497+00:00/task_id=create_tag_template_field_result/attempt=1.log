@@ -1,0 +1,30 @@
+[2025-03-06T07:52:19.594+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-06T07:52:19.736+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_complex.create_tag_template_field_result manual__2025-03-06T07:51:49.585497+00:00 [queued]>
+[2025-03-06T07:52:19.908+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_complex.create_tag_template_field_result manual__2025-03-06T07:51:49.585497+00:00 [queued]>
+[2025-03-06T07:52:19.911+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-03-06T07:52:19.951+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): create_tag_template_field_result> on 2025-03-06 07:51:49.585497+00:00
+[2025-03-06T07:52:19.999+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=25718) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-06T07:52:20.017+0000] {standard_task_runner.py:72} INFO - Started process 25769 to run task
+[2025-03-06T07:52:20.003+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_complex', 'create_tag_template_field_result', 'manual__2025-03-06T07:51:49.585497+00:00', '--job-id', '21', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_complex.py', '--cfg-path', '/tmp/tmp_8amx30u']
+[2025-03-06T07:52:20.019+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask create_tag_template_field_result
+[2025-03-06T07:52:20.174+0000] {task_command.py:467} INFO - Running <TaskInstance: example_complex.create_tag_template_field_result manual__2025-03-06T07:51:49.585497+00:00 [running]> on host 18303226ae83
+[2025-03-06T07:52:20.542+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_complex' AIRFLOW_CTX_TASK_ID='create_tag_template_field_result' AIRFLOW_CTX_EXECUTION_DATE='2025-03-06T07:51:49.585497+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-06T07:51:49.585497+00:00'
+[2025-03-06T07:52:20.543+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-06T07:52:20.543+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-06T07:52:20.543+0000] {logging_mixin.py:190} INFO - Current task name:create_tag_template_field_result state:running start_date:2025-03-06 07:52:19.736656+00:00
+[2025-03-06T07:52:20.544+0000] {logging_mixin.py:190} INFO - Dag name:example_complex and current dag run status:running
+[2025-03-06T07:52:20.544+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-06T07:52:20.545+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-06T07:52:20.545+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo create_tag_template_field_result']
+[2025-03-06T07:52:20.629+0000] {subprocess.py:99} INFO - Output:
+[2025-03-06T07:52:20.632+0000] {subprocess.py:106} INFO - create_tag_template_field_result
+[2025-03-06T07:52:20.646+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-06T07:52:20.716+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-06T07:52:20.716+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_complex, task_id=create_tag_template_field_result, run_id=manual__2025-03-06T07:51:49.585497+00:00, execution_date=20250306T075149, start_date=20250306T075219, end_date=20250306T075220
+[2025-03-06T07:52:20.761+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-06T07:52:20.762+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-06T07:52:20.762+0000] {logging_mixin.py:190} INFO - Dag name:example_complex queued_at:2025-03-06 07:51:49.608785+00:00
+[2025-03-06T07:52:20.762+0000] {logging_mixin.py:190} INFO - Task hostname:18303226ae83 operator:BashOperator
+[2025-03-06T07:52:20.846+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-06T07:52:20.971+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-06T07:52:20.977+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

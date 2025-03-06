@@ -1,0 +1,54 @@
+[2025-03-06T07:53:42.933+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-06T07:53:42.954+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_python_decorator.virtualenv_python manual__2025-03-06T07:52:52.081345+00:00 [queued]>
+[2025-03-06T07:53:42.964+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_python_decorator.virtualenv_python manual__2025-03-06T07:52:52.081345+00:00 [queued]>
+[2025-03-06T07:53:42.964+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-03-06T07:53:42.976+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): virtualenv_python> on 2025-03-06 07:52:52.081345+00:00
+[2025-03-06T07:53:42.987+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=26739) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-06T07:53:42.986+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_python_decorator', 'virtualenv_python', 'manual__2025-03-06T07:52:52.081345+00:00', '--job-id', '84', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_python_decorator.py', '--cfg-path', '/tmp/tmp62bn11ph']
+[2025-03-06T07:53:42.988+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask virtualenv_python
+[2025-03-06T07:53:42.988+0000] {standard_task_runner.py:72} INFO - Started process 26765 to run task
+[2025-03-06T07:53:43.036+0000] {task_command.py:467} INFO - Running <TaskInstance: example_python_decorator.virtualenv_python manual__2025-03-06T07:52:52.081345+00:00 [running]> on host 18303226ae83
+[2025-03-06T07:53:43.129+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_python_decorator' AIRFLOW_CTX_TASK_ID='virtualenv_python' AIRFLOW_CTX_EXECUTION_DATE='2025-03-06T07:52:52.081345+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-06T07:52:52.081345+00:00'
+[2025-03-06T07:53:43.130+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-06T07:53:43.131+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-06T07:53:43.131+0000] {logging_mixin.py:190} INFO - Current task name:virtualenv_python state:running start_date:2025-03-06 07:53:42.955489+00:00
+[2025-03-06T07:53:43.132+0000] {logging_mixin.py:190} INFO - Dag name:example_python_decorator and current dag run status:running
+[2025-03-06T07:53:43.132+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-06T07:53:43.133+0000] {process_utils.py:186} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvt1h_bdgv --python=python
+[2025-03-06T07:53:43.134+0000] {process_utils.py:190} INFO - Output:
+[2025-03-06T07:53:44.723+0000] {process_utils.py:194} INFO - created virtual environment CPython3.12.8.final.0-64 in 834ms
+[2025-03-06T07:53:44.724+0000] {process_utils.py:194} INFO -   creator CPython3Posix(dest=/tmp/venvt1h_bdgv, clear=False, no_vcs_ignore=False, global=False)
+[2025-03-06T07:53:44.725+0000] {process_utils.py:194} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2025-03-06T07:53:44.725+0000] {process_utils.py:194} INFO -     added seed packages: pip==24.3.1
+[2025-03-06T07:53:44.726+0000] {process_utils.py:194} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2025-03-06T07:53:44.838+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvt1h_bdgv/bin/pip install -r /tmp/venvt1h_bdgv/requirements.txt
+[2025-03-06T07:53:44.841+0000] {process_utils.py:190} INFO - Output:
+[2025-03-06T07:53:48.552+0000] {process_utils.py:194} INFO - Collecting colorama==0.4.0 (from -r /tmp/venvt1h_bdgv/requirements.txt (line 1))
+[2025-03-06T07:53:48.619+0000] {process_utils.py:194} INFO -   Downloading colorama-0.4.0-py2.py3-none-any.whl.metadata (13 kB)
+[2025-03-06T07:53:48.655+0000] {process_utils.py:194} INFO - Downloading colorama-0.4.0-py2.py3-none-any.whl (21 kB)
+[2025-03-06T07:53:48.887+0000] {process_utils.py:194} INFO - Installing collected packages: colorama
+[2025-03-06T07:53:48.979+0000] {process_utils.py:194} INFO - Successfully installed colorama-0.4.0
+[2025-03-06T07:53:49.297+0000] {process_utils.py:194} INFO - 
+[2025-03-06T07:53:49.298+0000] {process_utils.py:194} INFO - [notice] A new release of pip is available: 24.3.1 -> 25.0.1
+[2025-03-06T07:53:49.298+0000] {process_utils.py:194} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2025-03-06T07:53:49.393+0000] {process_utils.py:186} INFO - Executing cmd: /tmp/venvt1h_bdgv/bin/python /tmp/venv-call74yduhnn/script.py /tmp/venv-call74yduhnn/script.in /tmp/venv-call74yduhnn/script.out /tmp/venv-call74yduhnn/string_args.txt /tmp/venv-call74yduhnn/termination.log
+[2025-03-06T07:53:49.395+0000] {process_utils.py:190} INFO - Output:
+[2025-03-06T07:53:49.535+0000] {process_utils.py:194} INFO - [31msome red text
+[2025-03-06T07:53:49.536+0000] {process_utils.py:194} INFO - [42mand with a green background
+[2025-03-06T07:53:49.537+0000] {process_utils.py:194} INFO - [2mand in dim text
+[2025-03-06T07:53:49.538+0000] {process_utils.py:194} INFO - [0m
+[2025-03-06T07:53:49.538+0000] {process_utils.py:194} INFO - [2mPlease wait...
+[2025-03-06T07:53:50.539+0000] {process_utils.py:194} INFO - [2mPlease wait...
+[2025-03-06T07:53:51.539+0000] {process_utils.py:194} INFO - [2mPlease wait...
+[2025-03-06T07:53:52.539+0000] {process_utils.py:194} INFO - [2mPlease wait...
+[2025-03-06T07:53:53.540+0000] {process_utils.py:194} INFO - Finished
+[2025-03-06T07:53:53.571+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-06T07:53:53.578+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-06T07:53:53.579+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_python_decorator, task_id=virtualenv_python, run_id=manual__2025-03-06T07:52:52.081345+00:00, execution_date=20250306T075252, start_date=20250306T075342, end_date=20250306T075353
+[2025-03-06T07:53:53.586+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-06T07:53:53.586+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-06T07:53:53.587+0000] {logging_mixin.py:190} INFO - Dag name:example_python_decorator queued_at:2025-03-06 07:52:52.122877+00:00
+[2025-03-06T07:53:53.587+0000] {logging_mixin.py:190} INFO - Task hostname:18303226ae83 operator:_PythonVirtualenvDecoratedOperator
+[2025-03-06T07:53:53.598+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-06T07:53:53.611+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-06T07:53:53.612+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

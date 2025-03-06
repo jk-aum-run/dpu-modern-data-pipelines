@@ -1,0 +1,29 @@
+[2025-03-06T07:53:21.782+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-06T07:53:21.913+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_complex.create_tag_result manual__2025-03-06T07:52:25.042308+00:00 [queued]>
+[2025-03-06T07:53:22.122+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_complex.create_tag_result manual__2025-03-06T07:52:25.042308+00:00 [queued]>
+[2025-03-06T07:53:22.128+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-03-06T07:53:22.266+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): create_tag_result> on 2025-03-06 07:52:25.042308+00:00
+[2025-03-06T07:53:22.308+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=26400) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-06T07:53:22.324+0000] {standard_task_runner.py:72} INFO - Started process 26499 to run task
+[2025-03-06T07:53:22.320+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_complex', 'create_tag_result', 'manual__2025-03-06T07:52:25.042308+00:00', '--job-id', '68', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_complex.py', '--cfg-path', '/tmp/tmp842hd1ws']
+[2025-03-06T07:53:22.329+0000] {standard_task_runner.py:105} INFO - Job 68: Subtask create_tag_result
+[2025-03-06T07:53:23.018+0000] {task_command.py:467} INFO - Running <TaskInstance: example_complex.create_tag_result manual__2025-03-06T07:52:25.042308+00:00 [running]> on host 18303226ae83
+[2025-03-06T07:53:24.119+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_complex' AIRFLOW_CTX_TASK_ID='create_tag_result' AIRFLOW_CTX_EXECUTION_DATE='2025-03-06T07:52:25.042308+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-06T07:52:25.042308+00:00'
+[2025-03-06T07:53:24.122+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-06T07:53:24.129+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-06T07:53:24.131+0000] {logging_mixin.py:190} INFO - Current task name:create_tag_result state:running start_date:2025-03-06 07:53:21.968253+00:00
+[2025-03-06T07:53:24.131+0000] {logging_mixin.py:190} INFO - Dag name:example_complex and current dag run status:running
+[2025-03-06T07:53:24.134+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-06T07:53:24.136+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-06T07:53:24.149+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo create_tag_result']
+[2025-03-06T07:53:24.334+0000] {subprocess.py:99} INFO - Output:
+[2025-03-06T07:53:24.397+0000] {subprocess.py:106} INFO - create_tag_result
+[2025-03-06T07:53:24.414+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-06T07:53:24.520+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-06T07:53:24.525+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_complex, task_id=create_tag_result, run_id=manual__2025-03-06T07:52:25.042308+00:00, execution_date=20250306T075225, start_date=20250306T075321, end_date=20250306T075324
+[2025-03-06T07:53:24.588+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-06T07:53:24.589+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-06T07:53:24.589+0000] {logging_mixin.py:190} INFO - Dag name:example_complex queued_at:2025-03-06 07:52:25.053900+00:00
+[2025-03-06T07:53:24.589+0000] {logging_mixin.py:190} INFO - Task hostname:18303226ae83 operator:BashOperator
+[2025-03-06T07:53:24.757+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-06T07:53:24.774+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

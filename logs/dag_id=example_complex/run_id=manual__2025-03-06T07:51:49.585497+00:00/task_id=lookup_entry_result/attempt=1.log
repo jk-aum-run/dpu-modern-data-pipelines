@@ -1,0 +1,30 @@
+[2025-03-06T07:52:12.808+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-06T07:52:12.878+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_complex.lookup_entry_result manual__2025-03-06T07:51:49.585497+00:00 [queued]>
+[2025-03-06T07:52:12.907+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_complex.lookup_entry_result manual__2025-03-06T07:51:49.585497+00:00 [queued]>
+[2025-03-06T07:52:12.910+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-03-06T07:52:12.979+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): lookup_entry_result> on 2025-03-06 07:51:49.585497+00:00
+[2025-03-06T07:52:13.076+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_complex', 'lookup_entry_result', 'manual__2025-03-06T07:51:49.585497+00:00', '--job-id', '16', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_complex.py', '--cfg-path', '/tmp/tmpzgwxe_up']
+[2025-03-06T07:52:13.093+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask lookup_entry_result
+[2025-03-06T07:52:13.097+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=25632) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-06T07:52:13.122+0000] {standard_task_runner.py:72} INFO - Started process 25693 to run task
+[2025-03-06T07:52:13.351+0000] {task_command.py:467} INFO - Running <TaskInstance: example_complex.lookup_entry_result manual__2025-03-06T07:51:49.585497+00:00 [running]> on host 18303226ae83
+[2025-03-06T07:52:13.723+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_complex' AIRFLOW_CTX_TASK_ID='lookup_entry_result' AIRFLOW_CTX_EXECUTION_DATE='2025-03-06T07:51:49.585497+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-06T07:51:49.585497+00:00'
+[2025-03-06T07:52:13.726+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-06T07:52:13.726+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-06T07:52:13.728+0000] {logging_mixin.py:190} INFO - Current task name:lookup_entry_result state:running start_date:2025-03-06 07:52:12.879262+00:00
+[2025-03-06T07:52:13.732+0000] {logging_mixin.py:190} INFO - Dag name:example_complex and current dag run status:running
+[2025-03-06T07:52:13.734+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-06T07:52:13.735+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-03-06T07:52:13.740+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo lookup_entry_result']
+[2025-03-06T07:52:13.796+0000] {subprocess.py:99} INFO - Output:
+[2025-03-06T07:52:13.813+0000] {subprocess.py:106} INFO - lookup_entry_result
+[2025-03-06T07:52:13.817+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-03-06T07:52:13.876+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-06T07:52:13.877+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=example_complex, task_id=lookup_entry_result, run_id=manual__2025-03-06T07:51:49.585497+00:00, execution_date=20250306T075149, start_date=20250306T075212, end_date=20250306T075213
+[2025-03-06T07:52:13.909+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-06T07:52:13.910+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-06T07:52:13.910+0000] {logging_mixin.py:190} INFO - Dag name:example_complex queued_at:2025-03-06 07:51:49.608785+00:00
+[2025-03-06T07:52:13.911+0000] {logging_mixin.py:190} INFO - Task hostname:18303226ae83 operator:BashOperator
+[2025-03-06T07:52:13.980+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-06T07:52:14.232+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-06T07:52:14.257+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
