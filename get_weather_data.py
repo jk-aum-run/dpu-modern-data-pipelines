@@ -38,4 +38,4 @@ with DAG(
 
     end = EmptyOperator(task_id="end")
 
-    start >> end
+    start >> get_weather_data >> end

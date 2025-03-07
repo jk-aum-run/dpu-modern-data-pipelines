@@ -7,7 +7,7 @@ import requests
 
 
 def _get_weather_data():
-    API_KEY = "12fae523c489871fcd8bb083f5fc0720"
+    #API_KEY = "12fae523c489871fcd8bb083f5fc0720"
     # API_KEY = os.environ.get("WEATHER_API_KEY")
     # API_KEY = Variable.get("weather_api_key")
 
@@ -28,7 +28,7 @@ with DAG(
     "weather_api_dag",
     schedule="@hourly",
     start_date=timezone.datetime(2025, 2, 1),
-    tags=["dpu"]
+    tags=["dpu"],
 ):
     start = EmptyOperator(task_id="start")
 
@@ -39,4 +39,4 @@ with DAG(
 
     end = EmptyOperator(task_id="end")
 
-    start >> end
+    start >> get_weather_data >> end
