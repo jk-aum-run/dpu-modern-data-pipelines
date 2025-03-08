@@ -1,4 +1,5 @@
 from airflow import DAG
+from airflow.models import Variable
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 from airflow.utils import timezone
@@ -7,9 +8,9 @@ import requests
 
 
 def _get_weather_data():
-    #API_KEY = "12fae523c489871fcd8bb083f5fc0720"
+    # API_KEY = "12fae523c489871fcd8bb083f5fc0720"
     # API_KEY = os.environ.get("WEATHER_API_KEY")
-    # API_KEY = Variable.get("weather_api_key")
+    API_KEY = Variable.get("weather_api_key")
 
     payload = {
         "q": "bangkok",
