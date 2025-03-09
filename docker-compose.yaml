@@ -289,7 +289,7 @@ services:
   #     <<: *airflow-common-depends-on
   #     airflow-init:
   #       condition: service_completed_successfully
-
+ 
   db:
     image: postgres
     volumes:
@@ -298,20 +298,12 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
-    ports:
-      - 5433:5433
 
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8090:8080
-
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-    - 1025:1025
-    - 8025:8025
+      - 8091:8080
 
 volumes:
   postgres-db-volume:
